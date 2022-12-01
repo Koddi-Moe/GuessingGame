@@ -4,10 +4,8 @@ import random
 #computer picks number at random based on difficulty (easy, medium, hard)
 score = 0
 trys = 5
-while score < trys:
 
-
-    def difficulty(user_choice):
+def difficulty(user_choice):
         easy = random.randint(1, 5)
         medium = random.randint(1, 10)
         hard = random.randint(1, 50)
@@ -23,8 +21,14 @@ while score < trys:
 
         return difficulty_setting
 
-    user_difficulty_choice = input("Pick a difficulty, easy, medium, hard: ")
+user_difficulty_choice = input("Pick a difficulty, easy, medium, hard: ")
 
+
+
+while score < trys:
+
+
+    
     computer_num = difficulty(user_difficulty_choice.lower())
 
     #User inputs guess, computer outputs response based on how close answer is to number, if guess is not a number within range computer lets the user know
