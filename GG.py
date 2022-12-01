@@ -3,7 +3,7 @@ import random
 
 #computer picks number at random based on difficulty (easy, medium, hard)
 score = 0
-trys = 5
+tries = 5
 
 def difficulty(user_choice):
         easy = random.randint(1, 5)
@@ -25,7 +25,7 @@ user_difficulty_choice = input("Pick a difficulty, easy, medium, hard: ")
 
 
 
-while score < trys:
+while score < tries:
 
 
     
