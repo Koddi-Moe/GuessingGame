@@ -2,7 +2,7 @@
 import random
 
 #computer picks number at random based on difficulty (easy, medium, hard)
-score = 0
+score = 100
 tries = 5
 
 def difficulty(user_choice):
@@ -25,7 +25,7 @@ user_difficulty_choice = input("Pick a difficulty, easy, medium, hard: ")
 
 
 
-while score < tries:
+while tries > 0 or user_guess == computer_num:
 
 
     
@@ -43,10 +43,10 @@ while score < tries:
     elif int(user_guess) < int(computer_num):
         print("You guessed low.")
         print("Computer had picked: ", int(computer_num), "try again.")
-    score += 1
+    tries -= 1
     #User gets score reduction with each guess
 
-
+print(score)
     #after guess is correct final score is listed
 
 
